@@ -19,7 +19,7 @@ function App() {
           <Route path="UploadGift" element={<UploadGift/>} />
           <Route path="ListGift" element={<ListGift/>} />
           <Route path="GiftDetails/:id" element={<GiftDetails/>} />
-          <Route path="Signup" element={<Signup/>} />
+          <Route path="Signup" element={<Signup/>} /> 
           
 
 
