@@ -38,7 +38,8 @@ const Login = () => {
                 enqueueSnackbar('Something went wrong ', { variant: 'error' })
             
             }
-        }
+        },
+        validationSchema: SignupSchema
     })
   return (
     <div>
