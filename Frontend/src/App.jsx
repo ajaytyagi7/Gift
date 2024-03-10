@@ -7,6 +7,7 @@ import Navbar from './Component/Navbar'
 import ListGift from './Component/ListGift'
 import GiftDetails from './Component/GiftDetails'
 import Signup from './Component/Signup'
+import Login from './Component/Login'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
           <Route path="ListGift" element={<ListGift/>} />
           <Route path="GiftDetails/:id" element={<GiftDetails/>} />
           <Route path="Signup" element={<Signup/>} /> 
+          <Route path="Login" element={<Login/>} /> 
+
           
 
 

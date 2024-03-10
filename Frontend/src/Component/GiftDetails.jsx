@@ -8,7 +8,7 @@ const GiftDetails = () => {
     const [GiftData, setGiftData] = useState(null);
 
     const fetchGiftData = async () => {
-        const res = await fetch('http://localhost:4000/gift/getbyid/'+id);
+        const res = await fetch('http://localhost:4000/gift/getbyid/' +id);
         console.log(res.staus)
 
         const data = await res.json()
