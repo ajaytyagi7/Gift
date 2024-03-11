@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import MDEditor from '@uiw/react-md-editor/nohighlight';
+
 
 const GiftDetails = () => {
 
@@ -27,8 +29,10 @@ const GiftDetails = () => {
                     <div className='col-md-6'>
                         <h4>{GiftData.name}</h4>
                         <h6>₹ {GiftData.price}</h6>
-                        <p>{GiftData.description}</p>
                         <button className='btn btn-dark'>Buy Now</button>
+                        <MDEditor.Markdown  source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />
+                       
+
                     </div>    
                     
                 </div>

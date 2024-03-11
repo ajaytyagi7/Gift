@@ -16,7 +16,7 @@ const ListGift = () => {
     const displayGiftData = () => {
         return giftList.map((gift) => {
             return (
-                <div className="col-md-3">
+                <div className="col-md-3 p-3">
                         <div className='card shadow'>
                             <div>
 
@@ -24,7 +24,6 @@ const ListGift = () => {
                             </div>
                             <div className="card-body">
                                 <h6>{gift.name}</h6>
-                                <p >{gift.description}</p>
                                 <h6 >₹ {gift.price}</h6>
                                 <Link to={'/GiftDetails/' + gift._id} className='btn btn-dark float-end'>View Details</Link>
                             </div>

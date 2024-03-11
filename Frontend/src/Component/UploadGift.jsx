@@ -2,9 +2,15 @@ import React from 'react'
 import { useFormik } from 'formik'
 import { useState } from 'react'
 import { enqueueSnackbar } from 'notistack';
+import MDEditor from '@uiw/react-md-editor/nohighlight';
+
+
 
 
 const UploadGift = () => {
+
+    const [desc, setDesc] = React.useState(JSON.parse(sessionStorage.getItem('gift')));
+
     const [selFile, setSelFile] = useState('');
 
     const uploadForm = useFormik({
@@ -65,8 +71,15 @@ const UploadGift = () => {
                 <span className='ms-4 fs-6 text-danger'>{uploadForm.errors.price}</span>
                 <input type="text" className='form-control mb-2' placeholder='Product Price' id='price' onChange={uploadForm.handleChange} value={uploadForm.values.price}/>
 
-                <span className='ms-4 fs-6 text-danger'>{uploadForm.errors.description}</span>
-                <input type="text" className='form-control mb-4' placeholder='Product Description' id='description' onChange={uploadForm.handleChange} value={uploadForm.values.description} />
+                <label htmlFor="description">Description</label>
+                                <span className='ms-4 fs-6 text-danger '>{uploadForm.errors.description}</span>
+                                <MDEditor
+                                    value={desc}
+                                    onChange={setDesc}
+                                    plzceholder='Enter Description'
+                                />
+                
+
 
                 <input type="file" className='form-control mb-4' placeholder='Product Image' id='image' onChange={uploadFile}/>
                 <button className='btn btn-info w-100'>Upload</button>
