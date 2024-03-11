@@ -8,6 +8,7 @@ import ListGift from './Component/ListGift'
 import GiftDetails from './Component/GiftDetails'
 import Signup from './Component/Signup'
 import Login from './Component/Login'
+import Home from './Component/Home'
 
 function App() {
 
@@ -17,6 +18,10 @@ function App() {
      <BrowserRouter>
      <Navbar/>
         <Routes>
+
+          <Route path="Home" element={<Home/>} />
+          <Route path="/" element={<Home/>} />
+
           <Route path="UploadGift" element={<UploadGift/>} />
           <Route path="ListGift" element={<ListGift/>} />
           <Route path="GiftDetails/:id" element={<GiftDetails/>} />
