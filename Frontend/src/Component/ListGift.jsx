@@ -1,8 +1,11 @@
 import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { slide as Menu } from 'react-burger-menu'
 
 const ListGift = () => {
     const [giftList, setGiftList] = useState([])
+
+    
 
     const fetchGiftData = async () => {
         const res = await fetch('http://localhost:4000/gift/getall')
@@ -40,19 +43,15 @@ const ListGift = () => {
 
   return (
     <div className='container-fluid'>
-        <div className="row">
-            <div className="col-md-3">
-                <div className="card">
-                    <h4>Filter</h4>    
-                </div>
-            </div>
-            <div className='col-md-9 mt-5'>
+            <div className='p-4'>
                 <div className="row gy-4">
                 {displayGiftData()}
                 </div>
 
             </div>
-        </div>
+        
+       
+           
     </div>
   )
 }

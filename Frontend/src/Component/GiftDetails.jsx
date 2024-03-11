@@ -18,7 +18,7 @@ const GiftDetails = () => {
     }
 
     const displayGiftData = () => {
-        if(GiftData==!null){
+        if(GiftData!==null){
             return <div>
                 <div className='row'>
                     <div className='col-md-6'>

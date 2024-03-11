@@ -50,7 +50,7 @@ const Home = () => {
         <div className='container-fluid'>
             <div className='row p-5'>
                 <div className="col-md-6">
-                    <img className='img-fluid' src="https://images.pexels.com/photos/1303085/pexels-photo-1303085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <img className='img-fluid' src="https://img.freepik.com/free-photo/young-girl-with-present_144627-45101.jpg?t=st=1710170176~exp=1710173776~hmac=0029b0490ebfc19fcad8abda922ac3388caa4ff6585a937d2c6104f903f1b2fd&w=996" alt="" />
                 </div>
                 <div className="col-md-6">
                     <img className='img-fluid' src="https://img.freepik.com/free-photo/hands-holding-box-with-ring-with-blue-stone_1208-340.jpg?t=st=1710148832~exp=1710152432~hmac=c3406f2ff6a1cba4a6c7a74feab0ffbd0c11d46e63543c1ff2e59664d613b127&w=996" alt="" />
