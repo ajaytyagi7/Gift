@@ -2,3 +2,20 @@
     height: 95vh;
     
 }
+.home-hampers{
+    font-weight: 400px;
+
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+.home-hampers2{
+    font-size: 60px;
+}
+.home-66img{
+    height: 40vh;
+    width: 100%
+    
+}

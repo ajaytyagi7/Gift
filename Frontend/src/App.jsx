@@ -9,6 +9,7 @@ import GiftDetails from './Component/GiftDetails'
 import Signup from './Component/Signup'
 import Login from './Component/Login'
 import Home from './Component/Home'
+import Footer from './Component/Footer'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
 
         </Routes>
      </BrowserRouter>
+     <Footer/>
      </SnackbarProvider>
     </>
   )
