@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='contanier-fluid'>
+    <div className='contanier-fluid mb-4'>
         <header >
             <img className='w-100 header-img img-fluid' src="https://images.pexels.com/photos/1303085/pexels-photo-1303085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
             <div className='home-hampers fw-bold '>
@@ -66,7 +66,7 @@ const Home = () => {
             <img className='img-fluid mx-auto home-66img' src="https://img.freepik.com/premium-photo/bottle-wine-with-wineglass-gift-box-rusty-brown-background-panoramic-top-view-with-copy-space-your-text_96727-1802.jpg?w=1380" alt="" />
         </div>
         <div className='p-4'>
-            <h2 className='mx-3'>Cataogry</h2>
+            <h4 className='mx-3'>Cataogry</h4>
             <div className='row mt-3'>
                 <div className='col-md-3'>
                     <div className=''>
@@ -97,6 +97,63 @@ const Home = () => {
                 </div>
             </div>
                 
+        </div>
+        <div className="container-fluid ">
+            <h4>MEMORABLE GESTURES </h4>
+            <div className="row">
+                <div className="col-md-3">
+                    <div className="card shadow">
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/assortment-teacher-s-day-elements_23-2149044963.jpg?t=st=1710140963~exp=1710144563~hmac=4b66c31943e2486614f84778bd0a2f9a3009ae6f5c6929fcd881614eb62559b8&w=996" alt="" />
+                        <p className='text-center py-2'>Photo Frame</p>
+                        <p className='text-center'>₹ 200.00</p>
+                    </div>
+                </div>
+                <div className="col-md-3">
+                    <div className="card shadow">
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/assortment-teacher-s-day-elements_23-2149044963.jpg?t=st=1710140963~exp=1710144563~hmac=4b66c31943e2486614f84778bd0a2f9a3009ae6f5c6929fcd881614eb62559b8&w=996" alt="" />
+                        <p className='text-center py-2'>Photo Frame</p>
+                        <p className='text-center'>₹ 200.00</p>
+                    </div>
+                </div>
+                <div className="col-md-3">
+                    <div className="card shadow">
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/assortment-teacher-s-day-elements_23-2149044963.jpg?t=st=1710140963~exp=1710144563~hmac=4b66c31943e2486614f84778bd0a2f9a3009ae6f5c6929fcd881614eb62559b8&w=996" alt="" />
+                        <p className='text-center py-2'>Photo Frame</p>
+                        <p className='text-center'>₹ 200.00</p>
+                    </div>
+                </div>
+                <div className="col-md-3">
+                    <div className="card shadow">
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/assortment-teacher-s-day-elements_23-2149044963.jpg?t=st=1710140963~exp=1710144563~hmac=4b66c31943e2486614f84778bd0a2f9a3009ae6f5c6929fcd881614eb62559b8&w=996" alt="" />
+                        <p className='text-center py-2'>Photo Frame</p>
+                        <p className='text-center'>₹ 200.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container-fluid bg-warning  py-3 mt-3">
+            <div className="row p-5">
+                <div className="col-md-3">
+                    <p className='text-center '><i class="fa-solid fa-truck"></i></p>
+                    <p className='text-center fw-bold'>FAST DELIVERY</p>
+                    <p className='text-center'>We deliver gifts all over India</p>
+                </div>
+                <div className="col-md-3">
+                    <p className='text-center '><i class="fa-regular fa-heart"></i></p>
+                    <p className='text-center fw-bold'>MADE IN INDIA</p>
+                    <p className='text-center'>All our products are made in India.</p>
+                </div>
+                <div className="col-md-3">
+                    <p  className='text-center '><i class="fa-solid fa-bag-shopping"></i></p>
+                    <p className='text-center fw-bold'>SECURE PAYMENT</p>
+                    <p className='text-center'>Your payment information is processed securely.</p>
+                </div>
+                <div className="col-md-3">
+                    <p className='text-center'><i class="fa-regular fa-envelope"></i></p>
+                    <p className='text-center fw-bold'>CONTACT US</p>
+                    <p className='text-center'>Need to contact us? Just send us an e-mail at ajaytyagi9120@gmail.com</p>
+                </div>
+            </div>
         </div>
     </div>
   )
