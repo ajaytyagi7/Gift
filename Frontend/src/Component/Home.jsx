@@ -3,16 +3,62 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='contanier-fluid mb-4'>
-        <header >
-            <img className='w-100 header-img img-fluid' src="https://images.pexels.com/photos/1303085/pexels-photo-1303085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-            <div className='home-hampers fw-bold '>
-                <h1 className=' fw-bold home-hampers2'>Gourmet gift hampers <br/>
-                    for all occasions</h1>
-                <button className='btn btn-warning   fw-bold border border-dark'>Order Now</button>
+        <header className='header text-white'>
+        
+            <div className='p-5 float-end '>
+                <h1 className=' fw-bold display-3 py-5'>Gourmet gift hampers <br/>
+                for all occasions</h1>
+                <button className='btn btn-warning   fw-bold border border-dark mx-3'>Order Now</button>
             </div>
         </header>
-        <div className='container-fluid p-3'>
-            <h2 className='text-center my-3 fw-bold'> Treasured Connections</h2>  
+        <div className="container-fluid py-3">
+            <div className="row">
+                <div className="col-md-2">
+                    <div >
+                        <img className='img-fluid ' src="https://img.freepik.com/free-photo/woman-receives-gift-from-her-boyfriend_155003-11570.jpg?t=st=1710252376~exp=1710255976~hmac=e83e0e01ad991b400c597d8a0fcaab19adfad50fa00a70da2e86b0bee6e1eeb3&w=996" alt="" />
+                        <p className='text-center py-2'>Anniversary</p>
+
+                    </div>
+                </div>
+                <div className="col-md-2">
+                    <div >
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/birthday-cake-with-colored-candles-blue-background-ai-generative_123827-24032.jpg?t=st=1710252681~exp=1710256281~hmac=0abdb7aab03769c7542964bdaff63a519b9ab5706e3b063304c9b57ff27c24fe&w=996" alt="" />
+                        <p className='text-center py-2'>Birthday</p>
+
+                    </div>
+                </div>
+                <div className="col-md-2">
+                    <div >
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/front-view-giving-presents-traditional-indian-wedding-ceremony_8353-9780.jpg?t=st=1710252472~exp=1710256072~hmac=b2e648bf792f3b86febea9625c0b5cc35417df633aa04469d04e4295d8ef5124&w=996" alt="" />
+                        <p className='text-center py-2'>Wedding Gift</p>
+
+                    </div>
+                </div>
+                <div className="col-md-2">
+                    <div >
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/flat-lay-gorgeous-flowers-composition_23-2149045280.jpg?t=st=1710252528~exp=1710256128~hmac=518a05902d66e392b3487e43154f55c282c0a9c432196eff83ca302a232db898&w=996" alt="" />
+                        <p className='text-center py-2'>Best of Flower</p>
+
+                    </div>
+                </div>
+                <div className="col-md-2">
+                    <div >
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/young-lady-giving-present-box-guy-settee-room_23-2147987557.jpg?t=st=1710252592~exp=1710256192~hmac=d9844fa8c52ec091fa8c2dbefebee5c2934a7c87b26686ae4acaf99a1263f2ac&w=996" alt="" />
+                        <p className='text-center py-2'>For Him</p>
+
+                    </div>
+                </div>
+                <div className="col-md-2">
+                    <div >
+                        <img className='img-fluid' src="https://img.freepik.com/free-photo/young-girl-holding-red-gift-box-looking_114579-21986.jpg?t=st=1710252638~exp=1710256238~hmac=9786b8fbd444b20846aa89beed9759d9149002131256c3eac36a380c6cb97859&w=996" alt="" />
+                        <p className='text-center py-2'>For Her</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='container-fluid '>
+            <h2 className='text-center mb-4 fw-bold'> Treasured Connections</h2>  
             <div className='row'>
                 <div className='col-md-3'>
                     <div className=''>
@@ -82,14 +128,14 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="">
+                    <div >
                         <img className='img-fluid' src="https://img.freepik.com/free-photo/closeup-beauty-portrait-topless-woman-with-perfect-skin-natural-makeup_343596-8255.jpg?t=st=1710229663~exp=1710233263~hmac=3748c07921434da736b5f287a74a78ede9d9caff0719b0a836a80a251212e225&w=996" alt="" />
                         <p className='text-center py-2'>Beauty & Wellness</p>
                         
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="">
+                    <div >
                         <img className='img-fluid' src="https://img.freepik.com/free-photo/gorgeous-arrangement-flowers-wallpaper_23-2149057015.jpg?t=st=1710229751~exp=1710233351~hmac=71614269463b55b4b31437d18f7bea2588e13fac665b7a0dca0bcea0ed1ba19b&w=996" alt="" />
                         <p className='text-center py-2'>Flowers</p>
                         
