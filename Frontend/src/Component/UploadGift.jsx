@@ -78,11 +78,12 @@ const UploadGift = () => {
                                     onChange={setDesc}
                                     plzceholder='Enter Description'
                                 />
+                <input type="file" className='form-control mb-4' placeholder='Product Image' id='image' onChange={uploadFile}/>
+                <button className='btn btn-info w-100'>Upload</button>
                 
 
 
-                <input type="file" className='form-control mb-4' placeholder='Product Image' id='image' onChange={uploadFile}/>
-                <button className='btn btn-info w-100'>Upload</button>
+                
                 
 
 
