@@ -56,7 +56,7 @@ const Signup = () => {
 
 
   return (
-    <div>
+    <div className='bg-secondary-subtle'>
       <div className='col-md-4 mx-auto py-5'>
         <div className='card'>
           <div className='card-body'>
