@@ -10,7 +10,7 @@ const GiftDetails = () => {
     const [GiftData, setGiftData] = useState(null);
 
     const fetchGiftData = async () => {
-        const res = await fetch('http://localhost:4000/gift/getbyid/' +id);
+        const res = await fetch('http://localhost:4000/gift/getbyid/' + id);
         console.log(res.staus)
 
         const data = await res.json()
@@ -20,25 +20,23 @@ const GiftDetails = () => {
     }
 
     const displayGiftData = () => {
-        if(GiftData!==null){
+        if (GiftData !== null) {
             return <div>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <img src={'http://localhost:4000/' +GiftData.image} className='img-fluid' alt='' />
+                        <img src={'http://localhost:4000/' + GiftData.image} className='img-fluid' alt='' />
                     </div>
                     <div className='col-md-6'>
                         <h4>{GiftData.name}</h4>
                         <h6>₹ {GiftData.price}</h6>
                         <button className='btn btn-dark'>Buy Now</button>
-                        <MDEditor.Markdown  source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />
-                       
+                        <MDEditor.Markdown source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />
+                    </div>
 
-                    </div>    
-                    
                 </div>
             </div>
-               
-            
+
+
         }
     }
 
@@ -46,13 +44,13 @@ const GiftDetails = () => {
         fetchGiftData();
     }, []);
 
-  return (
-    <div>
-        <div className='container'>
-            {displayGiftData()}
+    return (
+        <div>
+            <div className='container mb-3'>
+                {displayGiftData()}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default GiftDetails

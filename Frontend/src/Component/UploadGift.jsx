@@ -72,7 +72,7 @@ const UploadGift = () => {
                 <input type="text" className='form-control mb-2' placeholder='Product Price' id='price' onChange={uploadForm.handleChange} value={uploadForm.values.price}/>
 
                 <label htmlFor="description">Description</label>
-                                <span className='ms-4 fs-6 text-danger '>{uploadForm.errors.email}</span>
+                                <span className='ms-4 fs-6 text-danger '>{uploadForm.errors.description}</span>
                                 <MDEditor
                                     value={desc}
                                     onChange={setDesc}
