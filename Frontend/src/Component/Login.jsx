@@ -42,9 +42,9 @@ const Login = () => {
         validationSchema: SignupSchema
     })
   return (
-    <div className='bg-secondary-subtle'>
+    <div className='login-bg-img text-white'>
         <div className="col-md-4 mx-auto py-5">
-            <div className="card">
+            <div className=" mt-5">
                 <div className="card-body">
                     <form onSubmit={LoginForm.handleSubmit} >
                         <h2 className="text-center">Login</h2><hr />

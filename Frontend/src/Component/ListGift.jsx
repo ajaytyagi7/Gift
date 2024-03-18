@@ -55,8 +55,8 @@ const ListGift = () => {
                             <div className="card-body">
                                 <h6>{gift.name}</h6>
                                 <h6 >₹{gift.price}</h6>
-                                <Link to={'/GiftDetails/' + gift._id} className='p-1 btn btn-warning fw-bold float-end'>View Details</Link> 
-                                <p>⭐Fast Devilery</p>
+                                <Link to={'/GiftDetails/' + gift._id} className='p-1 btn btn-warning  float-end'>View Details</Link> 
+                                <p>⭐ Fast Devilery</p>
 
                             </div>
                         </div>
@@ -74,11 +74,11 @@ const ListGift = () => {
 
   return (
     <div className='container-fluid'>
-            <div className='row p-4'>
+            <div className='row p-3'>
                 <div className="col-md-3">
                     <div className="card p-3">
-                        <h4>Filter</h4>
-                        <h6 className='p-3'>Price</h6>
+                        <h4>Filter</h4><hr />
+                        <h6 className=''>Price</h6><hr />
                         {
                             priceFilter.map((price)=>{
                                 return(
@@ -93,7 +93,7 @@ const ListGift = () => {
                         }
                     </div>
                 </div>
-                <div className="col-md-9 row gy-4">
+                <div className="col-md-9 row ">
                 {displayGiftData()}
                 </div>
 

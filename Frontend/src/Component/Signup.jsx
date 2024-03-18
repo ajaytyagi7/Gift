@@ -56,25 +56,25 @@ const Signup = () => {
 
 
   return (
-    <div className='bg-secondary-subtle'>
-      <div className='col-md-4 mx-auto py-5'>
-        <div className='card'>
-          <div className='card-body'>
-            <form onSubmit={SignupForm.handleSubmit} >
-            <h2 className='text-center'>Signup</h2>
+    <div className='Signup-bg-img text-white'>
+      <div className='col-md-4 mx-auto py-5 '>
+        <div className=' mt-5 '>
+          <div className='card-body '>
+            <form className='' onSubmit={SignupForm.handleSubmit} >
+            <h1 className='text-center'>Signup</h1><hr />
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.name && SignupForm.errors.name}</span>
-            <input type='text' className='form-control ' placeholder='Name' id='name' onChange={SignupForm.handleChange} value={SignupForm.values.name} />
+            <input type='text' className='form-control p-2 border border-dark bg-primary-subtle ' placeholder='Name' id='name' onChange={SignupForm.handleChange} value={SignupForm.values.name} />
 
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.email && SignupForm.errors.email}</span>
-            <input type='text' className='form-control ' placeholder='Email' id='email' onChange={SignupForm.handleChange} value={SignupForm.values.email}/>
+            <input type='text' className='form-control p-2  border border-dark bg-primary-subtle' placeholder='Email' id='email' onChange={SignupForm.handleChange} value={SignupForm.values.email}/>
 
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.password && SignupForm.errors.password}</span>
-            <input type='text' className='form-control ' placeholder='Password' id='pssword' onChange={SignupForm.handleChange} value={SignupForm.values.password}/>
+            <input type='text' className='form-control p-2  border border-dark bg-primary-subtle' placeholder='Password' id='pssword' onChange={SignupForm.handleChange} value={SignupForm.values.password}/>
 
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.confirm && SignupForm.errors.confirm}</span>
-            <input type='text' className='form-control mb-3' placeholder='Confirm Password' id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm}/>
+            <input type='text' className='form-control mb-3 p-2  border border-dark bg-primary-subtle' placeholder='Confirm Password' id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm}/>
             
-            <button className='btn btn-dark w-100 mb-3'>Signup</button>
+            <button className='btn btn-primary w-100 mb-3'>Signup</button>
             </form>
           </div>
         </div>
