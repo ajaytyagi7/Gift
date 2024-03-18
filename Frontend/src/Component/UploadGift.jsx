@@ -59,11 +59,11 @@ const UploadGift = () => {
       };
     
   return (
-    <div>
-        <div className='col-md-5 mx-auto py-4'>
-            <div className='card'>
+    <div className='container-fluid upload-bg-img '>
+        <div className='col-md-5 mx-auto py-3'>
+            <div className=''>
                 <div className='card-body'>
-                <form onSubmit={uploadForm.handleSubmit}>
+                <form className='bg-white p-4' onSubmit={uploadForm.handleSubmit}>
                 <h1 className='text-center'>Upload Product</h1><hr />
                 <span className='ms-4 fs-6 text-danger'>{uploadForm.errors.name}</span>
                 <input type="text" className='form-control mb-2' placeholder='Product Name' id='name' onChange={uploadForm.handleChange} value={uploadForm.values.name} />
@@ -78,8 +78,8 @@ const UploadGift = () => {
                                     onChange={setDesc}
                                     plzceholder='Enter Description'
                                 />
-                <input type="file" className='form-control mb-4' placeholder='Product Image' id='image' onChange={uploadFile}/>
-                <button className='btn btn-info w-100'>Upload</button>
+                <input type="file" className='form-control mb-4 mt-4' placeholder='Product Image' id='image' onChange={uploadFile}/>
+                <button className='btn btn-primary w-100'>Upload</button>
                 
 
 

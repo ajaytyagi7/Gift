@@ -42,19 +42,20 @@ const Login = () => {
         validationSchema: SignupSchema
     })
   return (
-    <div className='login-bg-img text-white'>
-        <div className="col-md-4 mx-auto py-5">
+    <div className='container-fluid login-bg-img text-white'>
+        <div className="col-md-3 mx-auto py-5">
             <div className=" mt-5">
                 <div className="card-body">
                     <form onSubmit={LoginForm.handleSubmit} >
-                        <h2 className="text-center">Login</h2><hr />
+                        <h1 className="text-center">Login</h1><hr />
                         <span className='ms-4 fs-6 text-danger'>{LoginForm.touched.email && LoginForm.errors.email}</span>
                         <input type="text" className="form-control" placeholder="Email" id='email' onChange={LoginForm.handleChange} value={LoginForm.values.email}/>
 
                          <span className='ms-4 fs-6 text-danger'>{LoginForm.touched.password && LoginForm.errors.password}</span>
                         <input type="text" className="form-control mb-3" placeholder="Password" id='password'  onChange={LoginForm.handleChange} value={LoginForm.values.password}/>
 
-                        <button className="btn btn-dark w-100 mb-3">Login</button>
+                        <button className="btn btn-primary w-100 mb-3">Login</button>
+                        <p className='text-center mt-3'>Don't Have an Account ?  <a className=" text-decoration-none" href="/Signup">Signup</a></p>
                     </form>
                 </div>
             </div>

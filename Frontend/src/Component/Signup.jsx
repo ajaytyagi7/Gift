@@ -2,6 +2,7 @@ import React from 'react'
 import {useFormik} from 'formik'
 import { enqueueSnackbar } from 'notistack'
 import * as Yup from 'yup'
+import { Link } from 'react-router-dom'
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string().required(' * ').min(4, 'Name is too short'),
@@ -56,7 +57,7 @@ const Signup = () => {
 
 
   return (
-    <div className='Signup-bg-img text-white'>
+    <div className='container-fluid Signup-bg-img text-white'>
       <div className='col-md-4 mx-auto py-5 '>
         <div className=' mt-5 '>
           <div className='card-body '>
@@ -75,6 +76,7 @@ const Signup = () => {
             <input type='text' className='form-control mb-3 p-2  border border-dark bg-primary-subtle' placeholder='Confirm Password' id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm}/>
             
             <button className='btn btn-primary w-100 mb-3'>Signup</button>
+            <p className='text-center mt-3'> Already Have a Register ?<Link to={'/Login'} className='text-decoration-none ' > Log In</Link></p>
             </form>
           </div>
         </div>

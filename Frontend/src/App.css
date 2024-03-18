@@ -29,7 +29,12 @@
     height:90vh;
 }
 .login-bg-img{
-    background-image: url(https://img.freepik.com/premium-photo/navy-blue-lines-abstract-background-with-free-space-blue-copy-space-digital-background_551880-383.jpg?size=626&ext=jpg&ga=GA1.1.913293683.1703873181&semt=ais);
+    background-image: url(https://img.freepik.com/free-photo/dark-geometric-background-with-copy-space_24972-1816.jpg?size=626&ext=jpg&ga=GA1.1.913293683.1703873181&semt=ais);
+    background-size: cover;
+    height:90vh;
+}
+.upload-bg-img{
+    background-image: url( https://img.freepik.com/premium-photo/abstract-background-molecules-technology-with-polygonal-shapes-connecting-dots-lines-connection-structure-big-data-visualization_7247-3244.jpg?size=626&ext=jpg&ga=GA1.1.913293683.1703873181&semt=ais);
     background-size: cover;
     height:90vh;
 }
