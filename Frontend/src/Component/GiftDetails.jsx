@@ -46,7 +46,7 @@ const GiftDetails = () => {
 
     return (
         <div>
-            <div className='container mb-3'>
+            <div className='container-fluid mb-3'>
                 {displayGiftData()}
             </div>
         </div>

@@ -4,6 +4,36 @@ import { slide as Menu } from 'react-burger-menu'
 
 const ListGift = () => {
     const [giftList, setGiftList] = useState([])
+    const [masterList, setMasterList] = useState([])
+
+    const priceFilter=['100-200','200-300','300-500','500-800','800-1000','1000-1200','12000-15000']
+    const [priceList, setpriceList] = useState([])
+
+    const filterprice= (e) => {
+        console.log(e.target.value);
+        const filterData=priceList.filter((gift)=>{return gift.price <=parseInt(e.target.value)});
+        setGiftList(filterData);
+    }
+    const SelectPrice = (e,priceFilter) => {
+        console.log(e.target.checked);
+        if(priceList.includes(priceFilter)){
+            const filterpriceFilter=priceList.filter((b)=>{return b!==priceFilter});
+            setpriceList(filterpriceFilter);
+            if(filterpriceFilter.length===0){
+                setGiftList(masterList);
+            }else{
+                const filterData=giftList.filter((price) =>{return filterpriceFilter.includes(price.price)});
+                setGiftList(filterData);
+            }
+        }else{
+            setpriceList([...priceList,priceFilter]);
+            const filterData=masterList.filter((price) =>{return [...priceList,priceFilter].includes(price.price)});
+            console.log(filterData);
+            setGiftList(filterData);
+        
+        }
+
+    }
 
     
 
@@ -16,7 +46,7 @@ const ListGift = () => {
     const displayGiftData = () => {
         return giftList.map((gift) => {
             return (
-                <div className="col-md-3 p-3">
+                <div className="col-md-4 p-3">
                         <div className='card shadow'>
                             <div>
 
@@ -24,8 +54,10 @@ const ListGift = () => {
                             </div>
                             <div className="card-body">
                                 <h6>{gift.name}</h6>
-                                <h6 >₹ {gift.price}</h6>
-                                <Link to={'/GiftDetails/' + gift._id} className='btn btn-dark float-end'>View Details</Link>
+                                <h6 >₹{gift.price}</h6>
+                                <Link to={'/GiftDetails/' + gift._id} className='p-1 btn btn-warning fw-bold float-end'>View Details</Link> 
+                                <p>⭐Fast Devilery</p>
+
                             </div>
                         </div>
                     
@@ -42,8 +74,26 @@ const ListGift = () => {
 
   return (
     <div className='container-fluid'>
-            <div className='p-4'>
-                <div className="row gy-4">
+            <div className='row p-4'>
+                <div className="col-md-3">
+                    <div className="card p-3">
+                        <h4>Filter</h4>
+                        <h6 className='p-3'>Price</h6>
+                        {
+                            priceFilter.map((price)=>{
+                                return(
+                                    <div className="form-check">
+                                        <input className="form-check-input" type="checkbox" value={price} id="flexCheckDefault" onChange={(e)=>{SelectPrice(e,price)}}/>
+                                        <label className="form-check-label" for="flexCheckDefault">
+                                            {price}
+                                        </label>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+                <div className="col-md-9 row gy-4">
                 {displayGiftData()}
                 </div>
 
