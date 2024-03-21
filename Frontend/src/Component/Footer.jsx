@@ -19,6 +19,28 @@ const Footer = () => {
                     <li>Browse</li>
                 </ul>
             </div>
+            <div className="col-md-3">
+                <ul>
+                    <br />
+                    <br />
+
+                    <li>Home</li>
+                    <li>Abouts</li>
+                    <li>Contact</li>
+                    <li>Browse</li>
+                </ul>
+            </div>
+            <div className="col-md-3">
+                <ul>
+                    <br />
+                    <br />
+
+                    <li>Home</li>
+                    <li>Abouts</li>
+                    <li>Contact</li>
+                    <li>Browse</li>
+                </ul>
+            </div>
         </div>
     </div>
   )
