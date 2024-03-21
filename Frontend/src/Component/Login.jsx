@@ -54,7 +54,7 @@ const Login = () => {
                          <span className='ms-4 fs-6 text-danger'>{LoginForm.touched.password && LoginForm.errors.password}</span>
                         <input type="text" className="form-control mb-3" placeholder="Password" id='password'  onChange={LoginForm.handleChange} value={LoginForm.values.password}/>
 
-                        <button className="btn btn-primary w-100 mb-3">Login</button>
+                        <button className="btn btn-outline-primary w-100 mb-3">Login</button>
                         <p className='text-center mt-3'>Don't Have an Account ?  <a className=" text-decoration-none" href="/Signup">Signup</a></p>
                     </form>
                 </div>

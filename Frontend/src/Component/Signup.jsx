@@ -75,7 +75,7 @@ const Signup = () => {
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.confirm && SignupForm.errors.confirm}</span>
             <input type='text' className='form-control mb-3 p-2  border border-dark bg-primary-subtle' placeholder='Confirm Password' id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm}/>
             
-            <button className='btn btn-primary w-100 mb-3'>Signup</button>
+            <button className='btn btn-outline-primary w-100 mb-3'>Signup</button>
             <p className='text-center mt-3'> Already Have a Register ?<Link to={'/Login'} className='text-decoration-none ' > Log In</Link></p>
             </form>
           </div>
