@@ -30,6 +30,11 @@ const Navbar = () => {
                   Product
                 </NavLink>
       </li>
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/ManageGift">
+                  Manage
+                </NavLink>
+      </li>
       </ul>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       

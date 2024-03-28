@@ -10,6 +10,7 @@ import Signup from './Component/Signup'
 import Login from './Component/Login'
 import Home from './Component/Home'
 import Footer from './Component/Footer'
+import ManageGift from './Component/ManageGift'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="GiftDetails/:id" element={<GiftDetails/>} />
           <Route path="Signup" element={<Signup/>} /> 
           <Route path="Login" element={<Login/>} /> 
+          <Route path="ManageGift" element={<ManageGift/>} /> 
 
           
 
