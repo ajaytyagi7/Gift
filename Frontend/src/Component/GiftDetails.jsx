@@ -27,11 +27,11 @@ const GiftDetails = () => {
                         <img src={'http://localhost:4000/' + GiftData.image} className='img-fluid' alt='' />
                     </div>
                     <div className='col-md-6'>
-                        <h2>{GiftData.name}</h2>
+                        <h3>{GiftData.name}</h3>
                         <h6>₹ {GiftData.price}</h6>
                         <p>⭐⭐⭐⭐⭐ Review 235</p>
                         <button className='btn btn-warning'>Buy Now</button>
-                        <h5 className='mt-3'>Product Description</h5>
+                        <h6 className='mt-3'>Product Description</h6>
                         <MDEditor.Markdown source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />
                     </div>
 

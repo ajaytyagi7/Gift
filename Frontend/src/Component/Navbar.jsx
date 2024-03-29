@@ -49,10 +49,7 @@ const Navbar = () => {
                 </NavLink>
       </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input className="form-control me-2 border border-dark" type="search" placeholder="Search Gift" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+     
      
     </div>
   </div>
