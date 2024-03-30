@@ -19,8 +19,6 @@ export const UserProvider = ({ children }) => {
         setuserloggedIn(false);
     }
 
-    
-
     return <UserContext.Provider value={{ currentUser, setCurrentUser, userloggedIn, setuserloggedIn, Logout }}>
         {children}
     </UserContext.Provider>

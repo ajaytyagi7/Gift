@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import MDEditor from '@uiw/react-md-editor/nohighlight';
+import useCartContext from '../CartContext';
 
 
 const GiftDetails = () => {
@@ -8,6 +9,7 @@ const GiftDetails = () => {
     const { id } = useParams();
 
     const [GiftData, setGiftData] = useState(null);
+    const {addItem, checkItemExists} = useCartContext();
 
     const fetchGiftData = async () => {
         const res = await fetch('http://localhost:4000/gift/getbyid/' + id);
@@ -31,6 +33,7 @@ const GiftDetails = () => {
                         <h6>₹ {GiftData.price}</h6>
                         <p>⭐⭐⭐⭐⭐ Review 235</p>
                         <button className='btn btn-warning'>Buy Now</button>
+                        <button className='btn btn-success' disabled={checkItemExists(GiftData._id)} onClick={() => {addItem(GiftData)}}>Add To Cart</button>
                         <h6 className='mt-3'>Product Description</h6>
                         <MDEditor.Markdown source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />
                     </div>
