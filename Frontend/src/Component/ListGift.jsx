@@ -76,7 +76,7 @@ const ListGift = () => {
     <div className='container-fluid'>
             <div className='row p-3'>
                 <div className="col-md-3">
-                    <div className="card p-3">
+                    <div className="shadow p-3">
                         <h4>Filter</h4><hr />
                         <h6 className=''>Price</h6><hr />
                         {
