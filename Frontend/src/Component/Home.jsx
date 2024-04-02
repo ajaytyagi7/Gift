@@ -4,20 +4,16 @@ const Home = () => {
   return (
     <div className='contanier-fluid mb-4'>
         <header className='header text-white '>
-            <div className='py-5 row mx-5'>
-                <div className='col-md-6 '>
-                  <input type="text" className='form-control  ' placeholder='Search....' />
-                    
-                </div>
-                <div className="col-md-4">
-                    <button className='btn btn-primary'>Search</button>
-                </div>
+            <div className='p-5 input-group'>
+                <input type="text" className='form-control  ' placeholder='Search....' />
+                <button  className='btn btn-primary '>Search</button>
+               
             </div>
         
             <div className=' mx-5 p-2 '>
                 <h1 className=' fw-bold display-3 '>Gourmet gift hampers <br/>
                 for all occasions</h1>
-                <button className='btn btn-warning   fw-bold border border-dark mx-3'>Shop Now</button>
+                <button className='btn btn-warning  mt-4 fw-bold border border-dark mx-3'>Shop Now</button>
             </div>
         </header>
         <div className="container-fluid py-3">
