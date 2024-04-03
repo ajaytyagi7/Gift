@@ -32,6 +32,7 @@ const GiftDetails = () => {
                         <h3>{GiftData.name}</h3>
                         <h6>₹ {GiftData.price}</h6>
                         <p>⭐⭐⭐⭐⭐ Review 235</p>
+                        
                         <button className='btn btn-warning'>Buy Now</button>
                         <button className='btn btn-success' disabled={checkItemExists(GiftData._id)} onClick={() => {addItem(GiftData)}}>Add To Cart</button>
                         <h6 className='mt-3'>Product Description</h6>
