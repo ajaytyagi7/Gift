@@ -1,7 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import useUserContext from '../UserContext'
 
 const Navbar = () => {
+
+  const { userloggedIn } = useUserContext();
+
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,17 +43,28 @@ const Navbar = () => {
     
       </ul>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-      
+        {userloggedIn ? 
+         <li className="nav-item">
+         <NavLink className="nav-link " to="/Logout">
+          <button className='p-1 btn btn-danger'>Logout</button>
+         </NavLink>
+       </li>:<>
+       <li className="nav-item">
+                <NavLink className="nav-link" to="/Login">
+                  <button className='btn btn-primary'>Login</button>
+                </NavLink>
+      </li>
       <li className="nav-item">
                 <NavLink className="nav-link" to="/Signup">
                   Signup
                 </NavLink>
       </li>
-      <li className="nav-item">
-                <NavLink className="nav-link" to="/Login">
-                  <button className='btn btn-primary'>Login</button>
-                </NavLink>
-      </li>
+      </>
+       }
+      
+      
+      
+     
       </ul>
      
      

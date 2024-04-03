@@ -13,6 +13,7 @@ import Footer from './Component/Footer'
 import ManageGift from './Component/ManageGift'
 import { CartProvider } from './CartContext'
 import Cart from './Component/Cart'
+import Logout from './Component/Logout'
 
 function App() {
 
@@ -34,6 +35,8 @@ function App() {
               <Route path="Login" element={<Login />} />
               <Route path="ManageGift" element={<ManageGift />} />
               <Route path="Cart/:id" element={<Cart />} />
+              <Route path="Logout" element={<Logout />} />
+
 
 
 

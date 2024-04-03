@@ -2,7 +2,7 @@ import { enqueueSnackbar } from "notistack";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const UserContext = createContext();
+const UserContext = useUserContext();
 
 export const UserProvider = ({ children }) => {
 
