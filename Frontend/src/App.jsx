@@ -14,13 +14,14 @@ import ManageGift from './Component/ManageGift'
 import { CartProvider } from './CartContext'
 import Cart from './Component/Cart'
 import Logout from './Component/Logout'
+import { UserProvider } from './UserContext'
 
 function App() {
 
   return (
-    <>
-      <SnackbarProvider maxSnack={3} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} >
-        <BrowserRouter>
+    <BrowserRouter>
+      <UserProvider>
+        <SnackbarProvider maxSnack={3} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} >
           <CartProvider>
             <Navbar />
             <Routes>
@@ -34,7 +35,7 @@ function App() {
               <Route path="Signup" element={<Signup />} />
               <Route path="Login" element={<Login />} />
               <Route path="ManageGift" element={<ManageGift />} />
-              <Route path="Cart/:id" element={<Cart />} />
+              <Route path="Cart" element={<Cart />} />
               <Route path="Logout" element={<Logout />} />
 
 
@@ -44,10 +45,10 @@ function App() {
 
             </Routes>
           </CartProvider>
-        </BrowserRouter>
-        <Footer />
-      </SnackbarProvider>
-    </>
+          <Footer />
+        </SnackbarProvider>
+      </UserProvider>
+    </BrowserRouter>
   )
 }
 

@@ -1,5 +1,5 @@
 import { enqueueSnackbar } from "notistack";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
 
@@ -19,6 +19,7 @@ export const CartProvider = ({ children }) => {
             setCartItems([...cartItems, { ...item, quantity: 1 }]);
             enqueueSnackbar('Item added to cart', { variant: 'success' });
         }
+        localStorage.setItem('cart', JSON.stringify(cartItems));
     }
 
     const addQty = (id) => {
@@ -32,6 +33,23 @@ export const CartProvider = ({ children }) => {
     const checkItemExists = (id) => {
         return cartItems.some((cartItem) => cartItem._id === id);
     }
+
+    // useEffect(() => {
+    //     const first = localStorage.getItem('cart');
+    //     if (first) {
+    //         setCartItems(JSON.parse(first));
+    //     }   
+    // }, [])
+
+    // useEffect(() => {
+    //     if(cartItems.length === 0) {
+    //         localStorage.removeItem('cart');
+    //     }else{
+    //         localStorage.setItem('cart', JSON.stringify(cartItems));
+    //     }
+    // }, [cartItems])
+    
+    
 
     console.log(cartItems);
 
