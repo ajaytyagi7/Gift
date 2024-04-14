@@ -70,7 +70,7 @@ const Signup = () => {
             <input type='text' className='form-control p-2  border border-dark bg-primary-subtle' placeholder='Email' id='email' onChange={SignupForm.handleChange} value={SignupForm.values.email}/>
 
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.password && SignupForm.errors.password}</span>
-            <input type='text' className='form-control p-2  border border-dark bg-primary-subtle' placeholder='Password' id='pssword' onChange={SignupForm.handleChange} value={SignupForm.values.password}/>
+            <input type='text' className='form-control p-2  border border-dark bg-primary-subtle' placeholder='Password' id='password' onChange={SignupForm.handleChange} value={SignupForm.values.password}/>
 
             <span className='ms-4 fs-6 text-danger'>{SignupForm.touched.confirm && SignupForm.errors.confirm}</span>
             <input type='text' className='form-control mb-3 p-2  border border-dark bg-primary-subtle' placeholder='Confirm Password' id='confirm' onChange={SignupForm.handleChange} value={SignupForm.values.confirm}/>

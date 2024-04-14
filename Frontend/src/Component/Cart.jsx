@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import useCartContext from '../CartContext';
 
 
 
 
 const Cart = () => {
 
-  const [cartList, setcartList] = useState([])
+  // const [cartList, setcartList] = useState([])
   const { id } = useParams();
 
-  const fetchCartData = async () => {
-    const res = await fetch('http://localhost:4000/cart/getbyid' + id);
-    console.log(res.staus)
+  const {cartItems} = useCartContext();
 
-    const data = await res.json()
-    console.log(data)
-    setcartList(data);
-  }
-
-  useEffect(() => {
-    // fetchCartData();
-  }, []);
 
   const displayCartData = () => {
     return <table className="table table-secondary">
@@ -36,7 +27,7 @@ const Cart = () => {
       </thead>
       <tbody>
         {
-          cartList.map((cart) => {
+          cartItems.map((cart) => {
             return <tr>
               <td>{cart.name}</td>
               <td>{cart.price}</td>

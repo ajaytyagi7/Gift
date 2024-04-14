@@ -40,6 +40,11 @@ const Navbar = () => {
                   Manage
                 </NavLink>
       </li>
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/cart">
+                  cart
+                </NavLink>
+      </li>
     
       </ul>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">

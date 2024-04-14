@@ -2,6 +2,7 @@ import React from 'react'
 import { useFormik } from 'formik'
 import { enqueueSnackbar } from 'notistack'
 import * as Yup from 'yup'
+import { useNavigate } from 'react-router-dom'
 
 const SignupSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('  *'),
@@ -13,6 +14,7 @@ const SignupSchema = Yup.object().shape({
 
 const Login = () => {
 
+    const navigate = useNavigate()
     const LoginForm = useFormik({
         initialValues: {
             email: '',
@@ -32,6 +34,7 @@ const Login = () => {
 
             if (res.status === 200) {
                 enqueueSnackbar('Login Success', { variant: 'success' })
+                navigate('/Home');
             } else if(res.status === 401) {
                 enqueueSnackbar('Inavlid  ', { variant: 'error' })
             }else{
