@@ -56,7 +56,7 @@ const ListGift = () => {
                                 <h6>{gift.name}</h6>
                                 <h6 >₹{gift.price}</h6>
                                 <Link to={'/GiftDetails/' + gift._id} className='p-1 btn btn-warning  float-end'>View Details</Link> 
-                                <p>⭐ Fast Devilery</p>
+                                <p>⭐Fast Devilery</p>
 
                             </div>
                         </div>

@@ -47,11 +47,18 @@ export const CartProvider = ({ children }) => {
         localStorage.setItem('cart', JSON.stringify(cartItems));
     }, [cartItems])
 
+    const removeItem = (id) => {
+        const updatedCartItems = cartItems.filter((cartItem) => cartItem._id !== id);
+        setCartItems(updatedCartItems);
+        enqueueSnackbar('Item removed from cart', { variant: 'success' });
+    };
+
+
 
 
     console.log(cartItems);
 
-    return <CartContext.Provider value={{ cartItems, setCartItems, addItem, addQty, checkItemExists }}>
+    return <CartContext.Provider value={{ cartItems, setCartItems, addItem, addQty, checkItemExists,removeItem }}>
         {children}
     </CartContext.Provider>
 };
