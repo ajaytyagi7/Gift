@@ -25,15 +25,15 @@ const GiftDetails = () => {
         if (GiftData !== null) {
             return <div>
                 <div className='row'>
-                    <div className='col-md-6'>
+                    <div className='col-md-5'>
                         <img src={'http://localhost:4000/' + GiftData.image} className='img-fluid' alt='' />
                     </div>
                     <div className='col-md-6'>
                         <h3>{GiftData.name}</h3>
-                        <h6>₹ {GiftData.price}</h6>
                         <p>⭐⭐⭐⭐⭐ Review 235</p>
+                        <h6 className='fs-4'>₹ {GiftData.price}</h6><p>Inclusive of all taxes</p>
                         <button className='btn btn-warning'>Buy Now</button>
-                        <button className='btn btn-success' disabled={checkItemExists(GiftData._id)} onClick={() => {addItem(GiftData)}}>Add To Cart</button>
+                        <button className=' display-1  btn btn-success mx-4' disabled={checkItemExists(GiftData._id)} onClick={() => {addItem(GiftData)}}>Add To Cart</button>
                         <h6 className='mt-3'>Product Description</h6>
                         <MDEditor.Markdown source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />
                     </div>
