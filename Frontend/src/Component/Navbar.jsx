@@ -56,12 +56,12 @@ const Navbar = () => {
        </li>:<>
        <li className="nav-item">
                 <NavLink className="nav-link" to="/Login">
-                  <button className='btn btn-primary'>Login</button>
+                  <p className='text-dark fs-2'><i class="fa-solid fa-user"></i></p>
                 </NavLink>
       </li>
       <li className="nav-item">
                 <NavLink className="nav-link" to="/Signup">
-                  Signup
+                  <button className='beautiful-button'>Signup</button>
                 </NavLink>
       </li>
       </>

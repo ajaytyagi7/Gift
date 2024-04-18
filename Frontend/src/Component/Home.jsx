@@ -13,7 +13,7 @@ const Home = () => {
             <div className=' mx-5 p-2 '>
                 <h1 className=' fw-bold display-3 '>Gourmet gift hampers <br/>
                 for all occasions</h1>
-                <button className='btn btn-warning  mt-4 fw-bold border border-dark mx-3'>Shop Now</button>
+                <button className='cta  mt-4 fw-bold border border-dark mx-3'>Shop Now</button>
             </div>
         </header>
         <div className="container-fluid py-3">
