@@ -35,19 +35,16 @@ const Navbar = () => {
                   Product
                 </NavLink>
       </li>
-      <li className="nav-item">
-                <NavLink className="nav-link" to="/ManageGift">
-                  Manage
-                </NavLink>
-      </li>
-      <li className="nav-item">
-                <NavLink className="nav-link" to="/cart">
-                  cart
-                </NavLink>
-      </li>
+      
+      
     
       </ul>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/cart">
+                  <p className='text-dark fs-2 p-1'><i class="fa-solid fa-cart-shopping"></i></p>
+                </NavLink>
+      </li>
         {userloggedIn ? 
          <li className="nav-item">
          <NavLink className="nav-link " to="/Logout">
@@ -66,6 +63,8 @@ const Navbar = () => {
       </li>
       </>
        }
+
+   
       
       
       
