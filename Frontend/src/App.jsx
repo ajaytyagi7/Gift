@@ -15,6 +15,8 @@ import { CartProvider } from './CartContext'
 import Cart from './Component/Cart'
 import Logout from './Component/Logout'
 import { UserProvider } from './UserContext'
+import Contact from './Component/Contact'
+import About from './Component/About'
 
 function App() {
 
@@ -37,6 +39,10 @@ function App() {
               <Route path="ManageGift" element={<ManageGift />} />
               <Route path="Cart" element={<Cart />} />
               <Route path="Logout" element={<Logout />} />
+              <Route path="Contact" element={<Contact />} />
+              <Route path="About" element={<About />} />
+
+
 
 
 

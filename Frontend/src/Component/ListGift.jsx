@@ -74,7 +74,12 @@ const ListGift = () => {
 
   return (
     <div className='container-fluid'>
-            <div className='row p-3'>
+         <div className='p-2 input-group w-50 mx-auto'>
+                <input type="text" className='form-control  ' placeholder='Search....' />
+                <button  className='btn btn-primary '>Search</button>
+               
+            </div>
+            <div className='row '>
                 <div className="col-md-3">
                     <div className="shadow p-3">
                         <h4>Filter</h4><hr />

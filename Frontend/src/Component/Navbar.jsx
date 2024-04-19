@@ -25,14 +25,20 @@ const Navbar = () => {
                   Home
                 </NavLink>
       </li>
-      <li className="nav-item">
-                <NavLink className="nav-link" to="/UploadGift">
-                  UploadProduct
-                </NavLink>
-      </li>
+      
       <li className="nav-item">
                 <NavLink className="nav-link" to="/ListGift">
                   Product
+                </NavLink>
+      </li>
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/Contact">
+                  Contact Us
+                </NavLink>
+      </li>
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/About">
+                  About Us
                 </NavLink>
       </li>
       
