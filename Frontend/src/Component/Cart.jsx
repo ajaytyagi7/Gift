@@ -7,10 +7,9 @@ import useCartContext from '../CartContext';
 
 const Cart = () => {
 
-  // const [cartList, setcartList] = useState([])
   const { id } = useParams();
 
-  const {cartItems} = useCartContext();
+  const {cartItems,removeItem,getcartTotal} = useCartContext();
 
 
   const displayCartData = () => {
@@ -20,7 +19,6 @@ const Cart = () => {
           <th>Name</th>
           <th>Price</th>
           <th>Quantity</th>
-          <th>Total</th>
           <th>Delete Data</th>
 
         </tr>
@@ -32,8 +30,7 @@ const Cart = () => {
               <td>{cart.name}</td>
               <td>{cart.price}</td>
               <td>{cart.quantity}</td>
-              <td>{cart.total}</td>
-              <td><button className='btn btn-danger' onClick={() => deleteCart(cart._id)}>Delete</button></td>
+              <td><button className='btn btn-danger' onClick={() => removeItem(cart._id)}>Delete</button></td>
             </tr>
           })
         }
@@ -46,6 +43,9 @@ const Cart = () => {
     <div>
       <div className='container-fluid mb-3'>
         {displayCartData()}
+      </div>
+      <div className='container-fluid'>
+        <h3>Total Amount: {getcartTotal()}</h3>
       </div>
     </div>
   )

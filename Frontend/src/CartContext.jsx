@@ -53,12 +53,20 @@ export const CartProvider = ({ children }) => {
         enqueueSnackbar('Item removed from cart', { variant: 'success' });
     };
 
+    const getcartTotal = () => {
+        let total = 0;
+        cartItems.forEach((item) => {
+            total += item.price * item.quantity;
+        });
+        return total;
+    }
+
 
 
 
     console.log(cartItems);
 
-    return <CartContext.Provider value={{ cartItems, setCartItems, addItem, addQty, checkItemExists,removeItem }}>
+    return <CartContext.Provider value={{ cartItems, setCartItems, addItem, addQty, checkItemExists,removeItem,getcartTotal}}>
         {children}
     </CartContext.Provider>
 };
