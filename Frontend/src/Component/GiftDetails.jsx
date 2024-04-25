@@ -32,7 +32,6 @@ const GiftDetails = () => {
                         <h3>{GiftData.name}</h3>
                         <p>⭐⭐⭐⭐⭐ Review 235</p>
                         <h6 className='fs-4'>₹ {GiftData.price}</h6><p>Inclusive of all taxes</p>
-                        <button className='btn btn-warning'>Buy Now</button>
                         <button className=' display-1  btn btn-success mx-4' disabled={checkItemExists(GiftData._id) } onClick={() => {addItem(GiftData)}}>Add To Cart</button>
                         <h6 className='mt-3'>Product Description</h6>
                         <MDEditor.Markdown source={GiftData.description} style={{ whiteSpace: 'pre-wrap' }} />

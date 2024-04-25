@@ -64,7 +64,7 @@ const Navbar = () => {
         {userloggedIn ? 
          <li className="nav-item">
          <NavLink className="nav-link " to="/Logout">
-          <button className='p-1 btn btn-danger'>Logout</button>
+          <button className=' button-logout'>Logout</button>
          </NavLink>
        </li>:<>
        <li className="nav-item">
