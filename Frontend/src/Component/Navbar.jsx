@@ -49,18 +49,7 @@ const Navbar = () => {
       </ul>
 
       <ul className="navbar-nav me-auto mb-2  mb-lg-0">
-      <li className="nav-item">
-                <NavLink className="nav-link" to="/cart">
-                <p type="button" className=" position-relative">
-                <p className='text-dark fs-2 p-1' ><i className="fa-solid fa-cart-shopping"></i></p>
-                
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {cartItems.length}
-                  <span className="visually-hidden">unread messages</span>
-                </span>
-                </p>
-                </NavLink>
-      </li>
+     
         {userloggedIn ? 
          <li className="nav-item">
          <NavLink className="nav-link " to="/Logout">
@@ -81,7 +70,18 @@ const Navbar = () => {
       </li>
       </>
        }
-
+         <li className="nav-item">
+                <NavLink className="nav-link" to="/cart">
+                <p type="button" className=" position-relative">
+                <p className='text-dark fs-3 p-1' ><i className="fa-solid fa-cart-shopping"></i></p>
+                
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {cartItems.length}
+                  <span className="visually-hidden">unread messages</span>
+                </span>
+                </p>
+                </NavLink>
+      </li>
    
       
       
