@@ -30,7 +30,7 @@ const Cart = () => {
               <td>{cart.name}</td>
               <td>{cart.price}</td>
               <td>{cart.quantity}</td>
-              <td><button className='btn btn-danger' onClick={() => removeItem(cart._id)}>Delete</button></td>
+              <td><button className='del del div ' onClick={() => removeItem(cart._id)}>Delete</button></td>
             </tr>
           })
         }
@@ -44,8 +44,9 @@ const Cart = () => {
       <div className='container-fluid mb-3'>
         {displayCartData()}
       </div>
+      
       <div className='container-fluid'>
-        <h3>Total Amount: {getcartTotal()}</h3>
+        <h3 className='text-end p-3'>Total Amount: {getcartTotal()}</h3>
       </div>
     </div>
   )

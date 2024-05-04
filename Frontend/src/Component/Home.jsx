@@ -2,9 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='contanier-fluid mb-4'>
+    <div className='contanier-fluid '>
         <header className='header text-white '>
-            <div className='p-3 input-group w-50 mx-auto'>
+            <div className='p-4 input-group w-50 mx-auto'>
                 <input type="text" className='form-control  ' placeholder='Search....' />
                 <button  className='btn btn-primary '>Search</button>
                
