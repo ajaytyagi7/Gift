@@ -6,7 +6,7 @@ const Home = () => {
         <header className='header text-white '>
             <div className='p-4 input-group w-50 mx-auto'>
                 <input type="text" className='form-control  ' placeholder='Search....' />
-                <button  className='btn btn-primary '>Search</button>
+                <button style={{backgroundColor:'#6b72fc'}}  className=' btn btn-white fw-bold'>Search</button>
                
             </div>
         

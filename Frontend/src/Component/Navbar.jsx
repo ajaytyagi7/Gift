@@ -51,26 +51,26 @@ const Navbar = () => {
       <ul className="navbar-nav me-auto mb-2  mb-lg-0 mx-5">
      
         {userloggedIn ? 
-         <li className="nav-item">
+         <li className="">
          <NavLink className="nav-link " to="/Logout">
           <button className=' button-logout'>Logout</button>
          </NavLink>
        </li>:<>
-       <li className="nav-item">
+       <li className="">
                 <NavLink className="nav-link" to="/Login">
                 <p className='text-dark fs-2'><i class="fa-solid fa-user"></i></p>
 
                 
                 </NavLink>
       </li>
-      <li className="nav-item">
+      <li className="">
                 <NavLink className="nav-link" to="/Signup">
                   <button className='beautiful-button'>Signup</button>
                 </NavLink>
       </li>
       </>
        }
-         <li className="nav-item">
+         <li className="">
                 <NavLink className="nav-link" to="/cart">
                 <p type="button" className=" position-relative">
                 <p className='text-dark fs-3 p-1' ><i className="fa-solid fa-cart-shopping"></i></p>

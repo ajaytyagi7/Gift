@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
     const Logout = () => {
         sessionStorage.removeItem('user');
         navigate('/Home');
-        enqueueSnackbar('Logged Out Successfully ', { variant: 'success' });
+        enqueueSnackbar(' ', { variant: 'success' });
         setuserloggedIn(false);
     }
 
