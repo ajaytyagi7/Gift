@@ -4,8 +4,31 @@
     url(https://images.pexels.com/photos/1303085/pexels-photo-1303085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     background-position: center;
-    
+    animation: change 20s infinite ease-in-out;
 }
+@keyframes change{
+  0%{
+    background-image: url(https://images.pexels.com/photos/1303085/pexels-photo-1303085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  }
+  20%{
+    background-image:url(https://img.freepik.com/free-photo/cute-birthday-arrangement-with-copy-space_23-2148276576.jpg?t=st=1715157812~exp=1715161412~hmac=84ab8b69f155d6d4103c7900a274e1a2e2825bb203e79c7c5d668932bd757336&w=996);
+  }
+  40%{
+    background-image:  url(https://img.freepik.com/free-photo/festive-still-life-christmas-present-arrangement-with-copy-space_23-2149161137.jpg?t=st=1715157846~exp=1715161446~hmac=0ba21accd5cfa2ee60cc99946ec7ea6a04774433c63ae24e1b9688b0c2283e3f&w=996);
+  }
+  60%{
+    background-image: url(https://img.freepik.com/free-photo/christmas-background-with-space-top_23-2147705186.jpg?t=st=1715157879~exp=1715161479~hmac=71ab4d3aadb76b97b5f24b2de370820673d51a332a35798940be246cdb74b8a1&w=996);
+  }
+  80%{
+    background-image: url(https://img.freepik.com/free-photo/flat-lay-frame-with-presents-copy-space_23-2148312014.jpg?t=st=1715157901~exp=1715161501~hmac=e4219b2197ec3f277fb72224d11e92b1efcf71738ec1a6610b09caa1b2f94dc2&w=996);
+  }
+  100%{
+    background-image: url(https://img.freepik.com/free-photo/flat-lay-beautiful-birthday-arrangement-with-copy-space_23-2148276579.jpg?t=st=1715157777~exp=1715161377~hmac=0b726586dee59453f9f68ca1400860902ab8e1b9d8239128f7b0016587412afc&w=996);
+  }
+}
+
+
+
 .home-hampers{
     font-weight: 400px;
 
@@ -22,6 +45,14 @@
     height: 40vh;
     width: 100%
     
+}
+.card-hover{
+    transition: 1s;
+    cursor: pointer;
+
+}
+.card-hover:hover{
+    transform: scale(1.1);
 }
 
 
