@@ -54,8 +54,13 @@ export const CartProvider = ({ children }) => {
     };
 
     const getcartTotal = () => {
+        let subtotal = 0;
+        let tax = 0;
         let total = 0;
+
         cartItems.forEach((item) => {
+            subtotal += item.price * item.quantity;
+            tax = subtotal * 0.18;
             total += item.price * item.quantity;
         });
         return total;

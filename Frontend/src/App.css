@@ -46,6 +46,9 @@
     width: 100%
     
 }
+.cart-img{
+    height: 10vh;
+}
 .card-hover{
     transition: 1s;
     cursor: pointer;

@@ -17,6 +17,7 @@ import Logout from './Component/Logout'
 import { UserProvider } from './UserContext'
 import Contact from './Component/Contact'
 import About from './Component/About'
+import Checkout from './Component/Checkout'
 
 function App() {
 
@@ -41,6 +42,8 @@ function App() {
               <Route path="Logout" element={<Logout />} />
               <Route path="Contact" element={<Contact />} />
               <Route path="About" element={<About />} />
+              <Route path="Checkout" element={<Checkout />} />
+
 
 
 

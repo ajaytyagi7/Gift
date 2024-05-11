@@ -43,6 +43,11 @@ const Navbar = () => {
                   About Us
                 </NavLink>
       </li>
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/Checkout">
+                  Checkout
+                </NavLink>
+      </li>
       
       
     
