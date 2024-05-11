@@ -286,11 +286,11 @@ const Home = () => {
                     <img className='img-fluid' src="https://thegiftstudio.com/cdn/shop/files/wedding_gift.jpg?v=1687527585&width=750" alt="" />
                 </div>
 
-                <div className="col-md-6 p-5 mt-5 ">
+                <div className="col-md-6   ">
                     <div className="   ">
                         <div className="card-body">
                          <h1 className='text-center mt-5 '>Wedding Gifting</h1>
-                           <h5 className='text-center mt-4 '>Celebrate their union with timeless elegance. Explore our curated collection of enchanting gifts, perfect for capturing the essence of their special day. Whether you're a guest or the happy couple, find the perfect expression of love and congratulations at The Gift Studio.</h5> 
+                           <h5 className=' mt-4 text-start'>Celebrate their union with timeless elegance. Explore our curated collection of enchanting gifts, perfect for capturing the essence of their special day. Whether you're a guest or the happy couple, find the perfect expression of love and congratulations at The Gift Studio.</h5> 
                             <button className='btn btn-outline-dark mt-5 mb-5'>Enquire Now</button>
                         </div>
                     </div>

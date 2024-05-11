@@ -13,9 +13,9 @@ const Cart = () => {
 
 
   const displayCartData = () => {
-    return <table className="table table-secondary">
+    return <table className="table  table-secondary w-50 mt-5 mx-auto">
       <thead>
-        <tr>
+        <tr >
           <th>Name</th>
           <th>Price</th>
           <th>Quantity</th>
@@ -23,7 +23,7 @@ const Cart = () => {
 
         </tr>
       </thead>
-      <tbody>
+      <tbody className=''>
         {
           cartItems.map((cart) => {
             return <tr>
@@ -46,7 +46,7 @@ const Cart = () => {
       </div>
       
       <div className='container-fluid'>
-        <h3 className='text-end p-3'>Total Amount: {getcartTotal()}</h3>
+        <h3 className='text-center p-3'>Total Amount: {getcartTotal()}</h3>
       </div>
     </div>
   )

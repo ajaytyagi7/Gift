@@ -36,7 +36,7 @@ const ManageGift = () => {
     }
 
     const displayGiftData=()=>{
-        return <table className="table table-secondary">
+        return <table className="table  table-secondary">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -61,8 +61,11 @@ const ManageGift = () => {
 
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid '>
+        <div className=''>
         {displayGiftData()}
+
+        </div>
     </div>
   )
 }
