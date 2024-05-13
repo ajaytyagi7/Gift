@@ -1,35 +1,99 @@
 import React from 'react'
+import { useFormik } from 'formik'
+import { enqueueSnackbar } from 'notistack';
+import * as Yup from 'yup'
+
+const CheckoutSchema = Yup.object().shape({
+    name: Yup.string().required(' * ').min(4, 'Name is too short'),
+    email: Yup.string().email('Invalid email').required('  *'),
+   street: Yup.string().required(' * '),
+    city: Yup.string().required(' * '),
+    state: Yup.string().required(' * '),
+    zip: Yup.string().required(' * '),
+    phone: Yup.string().required(' * ')
+
+
+  
+  });
+
+
 
 const Checkout = () => {
+
+    const  CheckoutForm = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            street: '',
+            city: '',
+            state: '',
+            zip: '',
+            phone: ''
+            
+        },
+        onsubmit: async (values, { setSubmitting }) => {
+            console.log(values)
+            const res = await fetch('http://localhost:4000/checkout/add', {
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+            setSubmitting(false)
+            console.log(res.status)
+            if (res.status === 200) {
+                enqueueSnackbar('Checkout Success', { variant: 'success' })
+            } else {
+                enqueueSnackbar('Something went wrong ', { variant: 'error' })
+            }
+        },
+        validationSchema: CheckoutSchema
+    })
   return (
     <div>
         <div className='com-md-6 w-50 mx-auto p-4'>
-            <div className='card'>
+            <form onSubmit={CheckoutForm.handleSubmit} >
+            <div className='shadow p-5'>
                 <div className="card-body">
                     <h3 className='text-center fw-bold'>Checkout</h3><hr />
                     <div className="row">
                         <div className="col-md-6 mt-3">
-                            <label htmlFor="" > First Name</label>
-                            <input type='text ' className='form-control'  />
+                            <label htmlFor="name" > Name</label>
+                            <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.name && CheckoutForm.errors.name}</span>
+
+                            <input type='text ' id='name' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.name} />
                         </div>
                         <div className="col-md-6  mt-3">
-                            <label htmlFor="">Last Name</label>
-                            <input type='text' className='form-control'  />
+                            <label htmlFor="email"> Email</label>
+                            <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.email && CheckoutForm.errors.email}</span>
+
+                            <input type='text' id='email' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.email} />
                         </div>
                     </div>
-                    <label className=' mt-3' htmlFor="">Street Address</label>
-                    <input type='text' className='form-control' />
+                    <label className=' mt-3' htmlFor="street">Street Address</label>
+                    <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.street && CheckoutForm.errors.street}</span>
+
+                    <input type='text' id='street' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.street} />
                     <div className="row">
                         <div className="col-md-6  mt-3">
-                            <label htmlFor="">City</label>
-                            <input type='text' className='form-control' />
+                            <label htmlFor="city">City</label>
+                             <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.city && CheckoutForm.errors.city}</span>
+
+                            <input type='text' id='city' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.city} />
                         </div>
                         <div className="col-md-6  mt-3">
-                            <label htmlFor="">Postal code</label>
-                            <input type='text' className='form-control' />
+                            <label htmlFor="zip">Postal code</label>
+                             <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.zip && CheckoutForm.errors.zip}</span>
+
+                            <input type='text' id='zip' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.zip} />
                         </div>
-                        <label className=' mt-3' htmlFor="">State</label>
-                        <select className='form-control '>
+                        <label className=' mt-3' htmlFor="state">State</label>
+                        <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.state && CheckoutForm.errors.state}</span>
+
+                        <select id='state' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.state}>
+                             <option >None</option>
+
                             <option value="AP">Andhra Pradesh</option>
                             <option value="AR">Arunachal Pradesh</option>
                             <option value="AS">Assam</option>
@@ -68,10 +132,11 @@ const Checkout = () => {
                             <option value="PY">Puducherry</option>
                         </select>
 
-                        <label className=' mt-3' htmlFor="">Phone Number</label>
-                        <input type='text' className='form-control' />
-                       <input type="checkbox" />
-                        <button className='btn btn-primary mt-3'>Place Order</button>
+                        <label className=' mt-3' htmlFor="phone">Phone Number</label>
+                        <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.phone && CheckoutForm.errors.phone}</span>
+
+                        <input type='text' id='phone' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.phone} />
+                        <button className='btn btn-primary mt-3 '> Next</button>
 
 
 
@@ -80,6 +145,7 @@ const Checkout = () => {
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </div>
   )
