@@ -18,6 +18,7 @@ import { UserProvider } from './UserContext'
 import Contact from './Component/Contact'
 import About from './Component/About'
 import Checkout from './Component/Checkout'
+import Payment from './Component/Payment'
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
               <Route path="Contact" element={<Contact />} />
               <Route path="About" element={<About />} />
               <Route path="Checkout" element={<Checkout />} />
+              <Route path="Payment" element={<Payment />} />
 
 
 

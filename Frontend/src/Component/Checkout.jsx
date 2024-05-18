@@ -3,6 +3,7 @@ import { useFormik } from 'formik'
 import { enqueueSnackbar } from 'notistack';
 import * as Yup from 'yup'
 
+
 const CheckoutSchema = Yup.object().shape({
     name: Yup.string().required(' * ').min(4, 'Name is too short'),
     email: Yup.string().email('Invalid email').required('  *'),
@@ -19,7 +20,8 @@ const CheckoutSchema = Yup.object().shape({
 
 
 const Checkout = () => {
-
+    
+    
     const  CheckoutForm = useFormik({
         initialValues: {
             name: '',
@@ -32,23 +34,25 @@ const Checkout = () => {
             
         },
 
-        onsubmit: async (values, { setSubmitting }) => {
+        onSubmit:async (values,{setSubmitting}) => {
             console.log(values)
-            const res = await fetch('http://localhost:4000/checkout/add', {
+            const res = await fetch('http://localhost:5000/checkout/add', {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {
                     'Content-Type': 'application/json'
                 },
             });
-            setSubmitting(false)
-            console.log(res.status)
-            if (res.status === 200) {
-                enqueueSnackbar('Checkout Success', { variant: 'success' })
-            } else {
-                enqueueSnackbar('Something went wrong ', { variant: 'error' })
-            }   
+            setSubmitting(false);
+           console.log(res.status);
+              if(res.status === 200){
+                enqueueSnackbar('Checkout Successfull',{variant:'success'});
+              }else{
+                enqueueSnackbar('Checkout Failed',{variant:'error'});
+              }
         },
+
+       
         validationSchema: CheckoutSchema
     })  
   return (
@@ -56,7 +60,7 @@ const Checkout = () => {
         <div className='col-md-6 w-50 mx-auto p-4'>
             <div className='shadow p-5'>
                 <div className="card-body">
-                <form onSubmit={CheckoutForm.handleSubmit} >
+                <form onSubmit={CheckoutForm.handleSubmit}>
 
                     <h3 className='text-center fw-bold'>Checkout</h3><hr />
                     <div className="row">
@@ -138,7 +142,7 @@ const Checkout = () => {
                         <span className='ms-4 fs-6 text-danger'>{CheckoutForm.touched.phone && CheckoutForm.errors.phone}</span>
 
                         <input type='text' id='phone' className='form-control border border-dark' onChange={CheckoutForm.handleChange} value={CheckoutForm.values.phone} />
-                        <button className='btn btn-primary mt-3 '> Next</button>
+                        <button type='submit' className='btn btn-primary mt-3 '> Next</button>
 
 
 

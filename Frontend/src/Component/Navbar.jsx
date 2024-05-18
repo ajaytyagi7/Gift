@@ -48,6 +48,11 @@ const Navbar = () => {
                   Checkout
                 </NavLink>
       </li>
+      <li className="nav-item">
+                <NavLink className="nav-link" to="/Payment">
+                  Payment
+                </NavLink>
+      </li>
       
       
     
