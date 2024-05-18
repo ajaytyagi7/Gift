@@ -31,6 +31,7 @@ const Checkout = () => {
             phone: ''
             
         },
+
         onsubmit: async (values, { setSubmitting }) => {
             console.log(values)
             const res = await fetch('http://localhost:4000/checkout/add', {
@@ -46,16 +47,17 @@ const Checkout = () => {
                 enqueueSnackbar('Checkout Success', { variant: 'success' })
             } else {
                 enqueueSnackbar('Something went wrong ', { variant: 'error' })
-            }
+            }   
         },
         validationSchema: CheckoutSchema
-    })
+    })  
   return (
     <div>
-        <div className='com-md-6 w-50 mx-auto p-4'>
-            <form onSubmit={CheckoutForm.handleSubmit} >
+        <div className='col-md-6 w-50 mx-auto p-4'>
             <div className='shadow p-5'>
                 <div className="card-body">
+                <form onSubmit={CheckoutForm.handleSubmit} >
+
                     <h3 className='text-center fw-bold'>Checkout</h3><hr />
                     <div className="row">
                         <div className="col-md-6 mt-3">
@@ -109,8 +111,8 @@ const Checkout = () => {
                             <option value="KL">Kerala</option>
                             <option value="MP">Madhya Pradesh</option>
                             <option value="MH">Maharashtra</option>
-                                <option value="MN">Manipur</option>
-                                <option value="ML">Meghalaya</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
                             <option value="MZ">Mizoram</option>
                             <option value="NL">Nagaland</option>
                             <option value="OR">Odisha</option>
@@ -143,9 +145,10 @@ const Checkout = () => {
                        
 
                     </div>
+                </form>
+
                 </div>
             </div>
-            </form>
         </div>
     </div>
   )
