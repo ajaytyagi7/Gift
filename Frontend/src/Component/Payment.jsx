@@ -1,6 +1,70 @@
 import React from 'react'
 
 const Payment = () => {
+
+    const paymentHandler = async (event) => {
+
+        const amount = 500;
+        const currency='INR';
+        const receiptId= '122345556'
+        const res=await fetch('http://localhost:4000/payment/order', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                    amount,
+                    currency, 
+                    receiptId:receiptId
+                 })
+         });
+
+         const order = await res.json();
+            console.log(order);
+
+        var option={
+            key: '',
+            amount ,
+            currency,
+            name: 'Gift Shop',
+            description: 'Test Transaction',
+            image: 'https://example.com/your_logo',
+            order_id: order.id,
+            handler: async function(response) {
+                alert('Payment Done Successfully');
+            },
+            prefill: {
+                name: ' Luxify',
+                email: 'tyagiajay785186@gmail.com',
+                contact: '9999999999'
+            },
+            notes: {
+                address: 'Luxify'
+            },
+            theme: {
+                color: '#3399cc'
+            }
+
+
+
+        }
+        var rzp1 = new window.Razorpay(option);
+        rzp1.open("Payment failed", function(response) {
+            alert(response.razorpay_payment_id);
+            alert(response.razorpay_order_id);
+            alert(response.razorpay_signature);
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.step);
+            alert(response.error.reason);
+
+
+        });
+        rzpl.open();
+        event.preventDefault();
+
+
+    }
   return (
     <div>
         <div>
@@ -21,7 +85,7 @@ const Payment = () => {
                         </div>
 
                         <h5 className='p-2 mt-3'>Total amount -</h5>
-                        <button type="submit" className="btn btn-danger w-100 mt-5">Pay</button>
+                        <button type="submit" className="btn btn-primary w-100 mt-5" onClick={paymentHandler}>Pay With Rozerpay</button>
 
                     </div>
                 </div>
