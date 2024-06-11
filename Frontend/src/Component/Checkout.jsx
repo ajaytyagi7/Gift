@@ -12,15 +12,11 @@ const CheckoutSchema = Yup.object().shape({
     state: Yup.string().required(' * '),
     zip: Yup.string().required(' * '),
     phone: Yup.string().required(' * ')
-
-
-  
   });
 
 
 
 const Checkout = () => {
-    
     
     const  CheckoutForm = useFormik({
         initialValues: {

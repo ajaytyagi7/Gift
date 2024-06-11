@@ -1,4 +1,8 @@
 const express = require('express');
+require('dotenv').config();
+const Razorpay = require('razorpay');
+
+
 
 const router = express.Router();
 
@@ -13,9 +17,10 @@ router.post('/order',async(req,res)=>{
         if(!req.body){
             res.status(400).send('Request Body is Empty')
         }
-        const options=req.body;
 
-        const order = await razorpay.orders.create(options); 
+        const {amount, currency}=req.body;
+        // console.log(options);
+        const order = await razorpay.orders.create({amount, currency}); 
         if(!order){
             res.status(500).send('Some Error Occured')
         }
